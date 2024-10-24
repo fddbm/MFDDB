@@ -69,10 +69,12 @@ body {
     color: transparent; 
     background-clip: text; 
     -webkit-background-clip: text; 
-    background-image: url('https://github.com/user-attachments/assets/ac8e88b8-b8d9-4cc2-bb39-6f4fd3c2b250'); 
+    background-image: url('flame-animation.gif'); 
     animation: fire-animation 1s infinite steps(10);
     background-size: 200% 100%; 
-    overflow: hidden; 
+    overflow: hidden;
+
+    
     position: relative; 
 }
 
@@ -83,7 +85,7 @@ body {
     top: 0;
     color: transparent; 
     text-shadow: 
-        0 0 5px rgba(0, 0, 0, 0.8), 
+        0 0 5px rgba(0, 0, 0, 0.8),  
         0 0 10px rgba(232, 93, 0, 0.6), 
         0 0 15px rgba(234, 255, 0, 0.4), 
         0 0 20px rgba(255, 0, 0, 0.4); 
