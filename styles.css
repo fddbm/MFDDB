@@ -63,29 +63,44 @@ body {
     align-items: center;
     text-align: center;
 }
-
 .fire-text {
     font-size: 8rem;
     font-weight: bold;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(45deg, #ff3300, #ff6600, #ffcc00, #ff6600, #ff3300);
-    animation: fire-animation 2s infinite linear;
-    background-size: 400% 400%;
+    color: transparent; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    background-image: url('flame-animation.gif'); 
+    animation: fire-animation 1s infinite steps(10);
+    background-size: 200% 100%; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.fire-text::before {
+    content: attr(data-text); 
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: transparent; 
+    text-shadow: 
+        0 0 5px rgba(0, 0, 0, 0.8), 
+        0 0 10px rgba(232, 93, 0, 0.6), 
+        0 0 15px rgba(234, 255, 0, 0.4), 
+        0 0 20px rgba(255, 0, 0, 0.4); 
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
 }
 
 @keyframes fire-animation {
     0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
+        background-position: 0% 0%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 100% 0%; 
     }
 }
+
 
 
 .gift {
