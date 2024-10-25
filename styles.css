@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #000000;
-    z-index: 1000; /* Хэдер всегда поверх остальных элементов */
+    z-index: 1000; 
 }
 
 .ufo-emoji, .ufo2-emoji {
@@ -272,7 +272,7 @@ body {
 
 
 
-/
+
 @keyframes moveSmall {
     0% {
         transform: translateY(0); 
@@ -471,3 +471,4 @@ section:nth-child(even) {
     color: #ffcc00;
     margin: 0;
 }
+
