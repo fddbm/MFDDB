@@ -1,0 +1,24 @@
+/* cards.css */
+.startpage-card, .project-card {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.startpage-card:hover, .project-card:hover {
+    transform: translateY(-10px) scale(1.05) rotate(2deg);
+    background-color: #444;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.startpage-icon, .project-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: icon-float 2s ease-in-out infinite, icon-rotate 2s ease-in-out infinite;
+}
