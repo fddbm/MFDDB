@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 10px; /* уменьшаем отступы */
+    padding: 10px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,11 +18,11 @@
 
 @media (max-width: 768px) {
     .header {
-        padding: 8px; /* Уменьшаем padding на планшетах */
+        padding: 8px; 
     }
 
     .emoji-plane, .emoji-car, .ufo-emoji, .ufo2-emoji {
-        font-size: 1.3rem; /* Уменьшаем размер эмодзи */
+        font-size: 1.3rem; 
     }
 
     .avatar {
@@ -31,17 +31,17 @@
     }
     
     .avatar-text {
-        font-size: 22px; /* Уменьшаем размер текста */
+        font-size: 22px; 
     }
 }
 
 @media (max-width: 480px) {
     .header {
-        padding: 5px; /* Уменьшаем padding на мобильных */
+        padding: 5px; 
     }
 
     .emoji-plane, .emoji-car, .ufo-emoji, .ufo2-emoji {
-        font-size: 1rem; /* Еще меньше на маленьких экранах */
+        font-size: 1rem; 
     }
 
     .avatar {
@@ -50,8 +50,8 @@
     }
     
     .avatar-text {
-        font-size: 18px; /* Уменьшаем размер текста */
-        white-space: nowrap; /* Предотвращаем перенос */
+        font-size: 18px; 
+        white-space: nowrap; 
     }
 }
 

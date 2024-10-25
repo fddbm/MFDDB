@@ -1,106 +1,105 @@
 .startpage-grid, .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Автоматическое заполнение карточками */
-    gap: 20px; /* Промежутки между карточками */
-    padding: 20px; /* Отступы вокруг секции */
-    justify-items: center; /* Центрирование карточек по горизонтали */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    padding: 20px; 
+    justify-items: center; 
 }
 
 @media (max-width: 768px) {
     .startpage-grid, .projects-grid {
-        grid-template-columns: repeat(2, 1fr); /* Две карточки в ряд на мобильных устройствах */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 .startpage-card, .project-card {
-    background-color: #333; /* Фоновый цвет карточек */
-    border-radius: 10px; /* Скругленные углы */
-    padding: 20px; /* Внутренние отступы */
-    width: 100%; /* Ширина карточек */
-    max-width: 250px; /* Максимальная ширина карточек */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
-    text-align: center; /* Центрирование текста */
-    animation: float 3s ease-in-out infinite; /* Анимация */
+    background-color: #333; 
+    border-radius: 10px; 
+    padding: 20px; 
+    width: 100%; 
+    max-width: 250px; 
+    box-shadow: 0 3px 7px rgba(212, 48, 3, 0.3); 
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; 
+    text-align: center; 
+    animation: float 3s ease-in-out infinite; 
 }
 
 .startpage-card:hover, .project-card:hover {
-    transform: translateY(-10px) scale(1.05) rotate(2deg); /* Эффект при наведении */
-    background-color: #444; /* Цвет фона при наведении */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Более выраженная тень */
+    transform: translateY(-10px) scale(1.05) rotate(2deg); 
+    background-color: #444444; 
+    box-shadow: 0 8px 16px rgba(255, 213, 0, 0.5); 
 }
 
 .startpage-icon, .project-icon {
-    font-size: 3rem; /* Размер иконок */
-    margin-bottom: 15px; /* Отступ снизу для иконок */
-    animation: icon-float 2s ease-in-out infinite, icon-rotate 2s ease-in-out infinite; /* Анимации для иконок */
+    font-size: 3rem; 
+    margin-bottom: 15px; 
+    animation: icon-float 2s ease-in-out infinite, icon-rotate 2s ease-in-out infinite; 
 }
 
 .startpage-card h3, .project-card h3 {
-    font-size: 1.2rem; /* Размер шрифта заголовков */
-    color: #ffcc00; /* Цвет заголовков */
-    margin: 0; /* Убираем отступы */
-    transition: color 0.3s ease; /* Плавный переход цвета */
+    font-size: 1.2rem;
+    color: #ffcc00; 
+    margin: 0; 
+    transition: color 0.3s ease;
 }
 
 .startpage-card:hover h3, .project-card:hover h3 {
-    color: #fff; /* Цвет заголовков при наведении */
+    color: #fff; 
 }
 
 .startpage-card-special {
-    position: relative; /* Относительное позиционирование для псевдоэлементов */
-    overflow: hidden; /* Скрытие содержимого, выходящего за пределы карточки */
-    background: url('flame-animation.gif') no-repeat center center; /* Фоновое изображение */
-    background-size: cover; /* Масштабирование фона */
-    border: none; /* Убираем границу */
-    box-shadow: 1px 6px 15px rgba(255, 0, 0, 0.2); /* Тень */
+    position: relative; 
+    overflow: hidden; 
+    background: url('flame-animation.gif') no-repeat center center; 
+    border: none; 
+    box-shadow: 1px 6px 15px rgba(255, 0, 0, 0.2); 
 }
 
 .startpage-card-special::before {
-    content: ""; /* Псевдоэлемент для затемнения */
-    position: absolute; /* Абсолютное позиционирование */
+    content: ""; 
+    position: absolute; 
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
-    z-index: 0; /* Позиционирование ниже содержимого */
-    border-radius: 10px; /* Скругленные углы */
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 0; 
+    border-radius: 10px; 
 }
 
 .startpage-card-special .startpage-icon {
-    font-size: 40px; /* Размер иконки для специальной карточки */
-    padding: 10px; /* Отступ для иконки */
-    border-radius: 50%; /* Круглая форма иконки */
+    font-size: 40px; 
+    padding: 10px; 
+    border-radius: 50%;
 }
 
 .startpage-card-special h3 {
-    font-size: 24px; /* Размер заголовка */
-    margin-top: 10px; /* Отступ сверху */
-    color: transparent; /* Прозрачный цвет текста */
+    font-size: 24px;
+    margin-top: 10px; 
+    color: transparent; 
     background: linear-gradient(45deg, 
         #ff4500,  
         #ff8c00,  
         #ffd700,  
         #ff4500,  
-        #ff0000); /* Градиентный фон */
-    background-clip: text; /* Обрезка фона по тексту */
-    -webkit-background-clip: text; /* Поддержка для WebKit */
-    padding: 5px 10px; /* Отступы для текста */
-    position: relative; /* Относительное позиционирование */
-    z-index: 1; /* Позиционирование выше псевдоэлемента */
-    border-radius: 5px; /* Скругленные углы */
-    animation: fire-gradient 3s ease infinite; /* Анимация градиента */
+        #ff0000); 
+    background-clip: text; 
+    -webkit-background-clip: text;
+    padding: 5px 10px; 
+    position: relative; 
+    z-index: 1; 
+    border-radius: 5px; 
+    animation: fire-gradient 3s ease infinite;
 }
 
 @keyframes fire-gradient {
     0% {
-        background-position: 0% 0%; /* Начальная позиция градиента */
+        background-position: 0% 0%; 
     }
     50% {
-        background-position: 100% 100%; /* Центральная позиция градиента */
+        background-position: 100% 100%; 
     }
     100% {
-        background-position: 0% 0%; /* Конечная позиция градиента */
+        background-position: 0% 0%; 
     }
 }

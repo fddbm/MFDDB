@@ -1,6 +1,5 @@
-/* gift.css */
 
-/* Основной стиль для элемента подарка */
+
 .gift {
     position: fixed;
     bottom: 15vh;
@@ -11,12 +10,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ff0000;          /* Красный цвет для иконки подарка */
+    color: #ff0000;          
     cursor: pointer;
-    animation: pulse 1.5s infinite ease-in-out; /* Пульсация */
+    animation: pulse 1.5s infinite ease-in-out; 
 }
 
-/* Анимация пульсации */
+
 @keyframes pulse {
     0% {
         transform: scale(1);

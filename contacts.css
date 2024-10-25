@@ -1,36 +1,36 @@
-/* Основной стиль для секции контактов */
+
 .contacts-section {
     padding: 40px;
     text-align: center;
 
 }
 
-/* Заголовок секции */
+
 .contacts-section h2 {
     font-size: 2rem;
     color: #ffffff;
     margin-bottom: 20px;
 }
 
-/* Контейнер для карточек */
+
 .contact-cards {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    max-width: 100%; /* Ограничение для предотвращения переполнения */
+    max-width: 100%; 
     margin: 0 auto;
 }
 
-/* Стиль карточек */
+
 .contact-card {
-    width: 140px; /* Увеличен размер для большего акцента */
+    width: 140px; 
     height: 140px;
     perspective: 1000px;
     position: relative;
 }
 
-/* Стили лицевой и задней стороны */
+
 .card-front, .card-back {
     width: 100%;
     height: 100%;
@@ -45,7 +45,7 @@
     backface-visibility: hidden;
     transition: transform 0.6s ease, color 0.3s ease;
     box-shadow: 0 4px 8px rgba(254, 250, 250, 0.1);
-    padding: 10px; /* Дополнительное пространство для текста */
+    padding: 10px; 
     box-sizing: border-box;
 }
 
@@ -60,28 +60,28 @@
     padding: 10px;
 }
 
-/* Анимация переворота карточек */
+
 .contact-card:hover .card-front {
     transform: rotateY(-180deg);
 }
 
 .contact-card:hover .card-back {
     transform: rotateY(0deg);
-    color: #ff792b; /* Изменение цвета текста при наведении */
+    color: #ff792b;
 }
 
-/* Стиль логотипа */
+
 .contact-logo {
     font-size: 2rem;
 }
 
-/* Текст в карточке */
+
 .contact-text {
     font-size: 1rem;
     font-weight: bold;
 }
 
-/* Адаптивные стили для экранов средней ширины */
+
 @media (max-width: 768px) {
     .contact-card {
         width: 100px;
@@ -93,10 +93,10 @@
     }
 }
 
-/* Адаптивные стили для мобильных устройств */
+
 @media (max-width: 480px) {
     .contact-card {
-        width: 90px; /* Немного больше для улучшения видимости на маленьких экранах */
+        width: 90px;
         height: 90px;
     }
 
@@ -105,6 +105,6 @@
     }
 
     .contact-text {
-        font-size: 0.75rem; /* Уменьшение текста для небольших экранов */
+        font-size: 0.75rem; 
     }
 }
