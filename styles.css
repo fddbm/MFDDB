@@ -14,6 +14,78 @@ body {
     padding-top: 60px;
 }
 
+
+
+
+
+
+
+
+
+.animation-container {
+    position: relative;
+    width: 100vw; 
+    height: 100vh; 
+}
+
+
+.emoji-plane, .emoji-car {
+    position: absolute; 
+    font-size: 60px; 
+    top: -60px; 
+    opacity: 0; 
+    animation: fall 3s forwards; 
+}
+
+
+.emoji-plane {
+    left: 25%; 
+    animation-delay: 0s; 
+}
+
+
+.emoji-car {
+    left: 75%; 
+    animation-delay: 5s; 
+}
+
+
+@keyframes fall {
+    0% {
+        top: -60px; 
+        opacity: 0; 
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        top: calc(100vh + 60px); 
+        opacity: 0; 
+    }
+}
+
+
+.emoji-plane, .emoji-car {
+    animation: fall 3s forwards;
+    animation-iteration-count: infinite;
+}
+
+.emoji-plane {
+    animation-delay: 0s; 
+}
+
+.emoji-car {
+    animation-delay: 5s; 
+}
+
+
+
+
+
+
+
+
+
 .header {
     position: fixed;
     top: 0;
@@ -338,6 +410,18 @@ body {
     animation: float 3s ease-in-out infinite;
 }
 
+.startpage-card, .project-card {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
 .startpage-card:hover, .project-card:hover {
     transform: translateY(-10px) scale(1.05) rotate(2deg);
     background-color: #444;
@@ -478,7 +562,7 @@ body {
     position: fixed;
     left: 20px;
     bottom: 20px;
-    font-size: 7rem;
+    font-size: 5rem;
     cursor: pointer;
     animation: pulse 1.5s infinite; 
 }
